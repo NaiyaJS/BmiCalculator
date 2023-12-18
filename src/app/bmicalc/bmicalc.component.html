@@ -1,0 +1,62 @@
+
+
+<div class = "card">
+    <div class="card-header">{{title}}</div>
+    <div class="card-body">
+        <p class="card-options">
+            (
+            <button type="button" class="btn btn-link" (click)="switchToEnglish()"[class.active]="!isMetric">English</button>
+            |
+            <button type="button" class="btn btn-link"(click)="switchToMetric()"[class.active]="isMetric">Metric</button>
+            )
+        </p>
+        <ng-container *ngIf="!isMetric">
+            <h6 class="card-height"> 1. Height: </h6>
+        
+            <div class="card-height">
+                <p class="height-feet">Feet 
+                    <br>
+                    <input type="number" [(ngModel)]="heightInFeet">
+                </p>
+                <p class="height-inches">Inches
+                    <br>
+                    <input type="number" [(ngModel)]="heightInInches">
+                </p>
+            </div>
+        
+            <h6 class="card-weight"> 2. Weight: </h6>
+        
+            <p class="weight-options">Pounds 
+                <br>
+                <input type="number" [(ngModel)]="weightInPounds">
+            </p>
+
+        </ng-container>
+        <ng-container *ngIf="isMetric">
+            <h6 class="card-height"> 1. Height: </h6>
+        
+            <div class="card-height">
+                <p class="height-feet">Centimeters: 
+                    <br>
+                    <input type="number"[(ngModel)]="heightInCm">
+                </p>
+            </div>
+        
+            <h6 class="card-weight"> 2. Weight: </h6>
+        
+            <p class="weight-options">Kilograms: 
+                <br>
+                <input type="number" [(ngModel)]="weightInKg">
+            </p>
+
+        </ng-container>
+
+        <form (submit)="calculateBMI()">
+            <button type="submit" class="btn btn-primary custom-calculate-button">Calculate</button>
+
+        </form>
+        
+
+    </div>
+
+</div>
