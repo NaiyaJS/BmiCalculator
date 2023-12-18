@@ -1,0 +1,76 @@
+
+<div class="card">
+    <div class="card-header">{{title}}</div>
+    <div class="card-body">
+        <p class="card-options">
+            <button type="button" class="btn btn-link" (click)="recalculateBMI()">Recalculate BMI</button>
+
+        </p>
+
+        <div class="row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title">For the information you entered:</p>
+                  
+                  <p class="card-text">
+                    Height: 
+                    {{!isMetric ? heightInFeet + ' feet  ' + heightInInches + ' inches' : heightInCm + 'cm'}} 
+                    <br>
+                    Weight: 
+                    {{!isMetric ? weightInPounds + ' pounds' : weightInKg + ' kg'}}
+                  </p>
+                  
+                  <p class="card-text">
+                    Your BMI is {{bmi}}, indicating your weight is in the {{bmiWeightStatus}} category for adults of your height.
+                    BMI is a screening measure and is not intended to diagnose disease or illness.
+                    For more information, visit <a href="https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html" target="blank">About Adult BMI</a>.
+                  </p>
+
+                  <p class="card-text">
+                    Maintaining a weight in the healthy BMI range is one way to support overall health as you age.
+                    For more information about lifestyle approaches, visit <a href="https://www.cdc.gov/healthyweight/index.html" target="blank">Healthy Weight</a>.
+                  </p>
+
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">BMI</th>
+                        <th scope="col">Weight Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Below 18.5</td>
+                        <td>Underweight</td>
+                      </tr>
+
+                      <tr>
+                        <td>18.5 - 14.9</td>
+                        <td>Healthy Weight</td>
+                      </tr>
+
+                      <tr>
+                        <td>25.0 - 29.9</td>
+                        <td>Overweight</td>
+                      </tr>
+
+                      <tr>
+                        <td>30.0 and Above</td>
+                        <td>Obesity</td>
+                      </tr>
+
+
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+
+
+    </div>
+</div>

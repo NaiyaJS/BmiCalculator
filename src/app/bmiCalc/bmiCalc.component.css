@@ -1,0 +1,42 @@
+.card-header{
+    background-color:rgb(0, 0, 99);
+    color:white;
+    font-size: larger;
+}
+.active{
+    color:black
+}
+.card-options{
+    text-align: right;
+}
+
+.card-options button{
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.height-feet,
+.height-inches {
+    display: inline-block;
+    /* margin-right: 10px;  */
+    margin-left: 10px;
+}
+.height-feet{
+    margin-left: 60px;
+}
+.height-feet input, .height-inches input{
+    width: 75px;
+}
+.weight-options input{
+    width:75px;
+}
+.weight-options{
+    margin-left: 60px;
+}
+.card-options a{
+    color:rgb(0, 0, 99);
+  
+}
+.custom-calculate-button{
+    background-color: rgb(0, 0, 99);
+}

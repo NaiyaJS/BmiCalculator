@@ -3,16 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BmiCalcComponent } from './bmiCalc/bmiCalc.component';
+import { ResultsComponent } from './results/results.component';
+import { FormsModule } from '@angular/forms';
+import { BmiService } from '../bmiService';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BmiCalcComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [BmiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
